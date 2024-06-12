@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/benign-conditions", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:"The Breast",icon:"mdi-home-heart",dataFile:"breast-density",category:"success",subTitle:"subSuccess",model:{name:"NoInfarct"},parentTopic:{slug:"benign",heading:a,title:"B.C."}}]]}}("Breast Benign Conditions")));
