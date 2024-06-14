@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/density-breast", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:"The Breast",icon:"mdi-home-heart",dataFile:"breast-density",category:"success",subTitle:"subSuccess",model:{name:"NoInfarct"},parentTopic:{slug:"density",heading:a,title:"Density"}}]]}}("Breast Density")));

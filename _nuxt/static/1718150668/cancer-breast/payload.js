@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/cancer-breast", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:"The Breast Cancer",icon:"mdi-home-heart",dataFile:"breast-density",category:"success",subTitle:"subSuccess",model:{name:"NoInfarct"},parentTopic:{slug:"cancer",heading:a,title:"Cancer"}}]]}}("Breast Cancer")));
