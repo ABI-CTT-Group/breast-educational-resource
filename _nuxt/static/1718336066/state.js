@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fbreast-app\u002F_nuxt\u002Fstatic\u002F1718336066",layout:"default",error:a,state:a,serverRendered:false,routePath:"\u002F",config:{_app:{basePath:"\u002Fbreast-app\u002F",assetsPath:"\u002Fbreast-app\u002F_nuxt\u002F",cdnURL:a}}}}(null));
