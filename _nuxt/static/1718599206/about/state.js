@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fbreast-educational-resource\u002F_nuxt\u002Fstatic\u002F1718599206",layout:"default",error:a,state:{currentContent:{}},serverRendered:true,routePath:"\u002Fabout",config:{_app:{basePath:"\u002Fbreast-educational-resource\u002F",assetsPath:"\u002Fbreast-educational-resource\u002F_nuxt\u002F",cdnURL:a}}}}(null));
