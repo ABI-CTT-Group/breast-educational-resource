@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{565:function(e,n,t){"use strict";t.r(n);var r={middleware:function(e){return(0,e.redirect)("/model-breast")}},l=t(34),component=Object(l.a)(r,(function(){return(0,this._self._c)("div")}),[],!1,null,null,null);n.default=component.exports}}]);
