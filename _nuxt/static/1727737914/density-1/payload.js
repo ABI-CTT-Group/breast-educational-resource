@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/density-1", {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:"A",heading:"Almost entirely fat",icon:"mdi-home-heart",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"normal"},parentTopic:{slug:"density",heading:"Breast Density",title:"Density"}}]]});
