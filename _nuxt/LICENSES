@@ -1,17 +1,4 @@
 /*!
- * Vue.js v2.7.16
- * (c) 2014-2023 Evan You
- * Released under the MIT License.
- */
-
-/*!
- * vuex v3.6.2
- * (c) 2021 Evan You
- * @license MIT
- */
-
-
-/*!
 	fflate - fast JavaScript compression/decompression
 	<https://101arrowz.github.io/fflate>
 	Licensed under MIT. https://github.com/101arrowz/fflate/blob/master/LICENSE
@@ -132,4 +119,17 @@
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
+ */
+
+
+/*!
+ * Vue.js v2.7.16
+ * (c) 2014-2023 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
  */
