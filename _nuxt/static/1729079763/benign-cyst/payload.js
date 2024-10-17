@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/benign-cyst", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:a,icon:"mdi-home-heart",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"cyst"},parentTopic:{slug:"benign",heading:"Breast Benign Conditions",title:"Benign"}}]]}}("Cyst")));
