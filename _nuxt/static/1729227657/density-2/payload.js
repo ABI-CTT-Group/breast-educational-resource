@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/density-2", {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:"2",heading:"Scattered fibroglandular densities",icon:"mdi-dots-triangle",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"density_2"},parentTopic:{slug:"density",heading:"Breast Density",title:"Density"}}]]});
