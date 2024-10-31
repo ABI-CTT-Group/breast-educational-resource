@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/benign-fibroadenoma", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:a,icon:"mdi-home-heart",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"fibroadenoma"},parentTopic:{slug:"benign",heading:"Breast Benign Conditions",title:"Benign"}}]]}}("Fibroadenoma")));

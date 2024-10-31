@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/cancer-ductal", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:a,icon:"mdi-home-heart",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"ductal"},parentTopic:{slug:"cancer",heading:"Breast Cancer",title:"Cancer"}}]]}}("Ductal")));
