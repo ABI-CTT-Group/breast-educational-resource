@@ -6,7 +6,7 @@
       </v-tabs>
 
     <div class="hidden md:flex absolute w-full top-24 flex justify-center items-center text-gray-950 text-xs">
-      <div class="w-1/4 text-left" v-html="middlePanelText[modelName]"></div>
+      <div class="w-1/4 text-center" v-html="middlePanelText[modelName]"></div>
     </div>
     
     <div ref="baseDomObject" class="h-full" :class="mdAndUp ? 'baseDom-md' : 'baseDom-sm'" />
