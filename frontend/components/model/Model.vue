@@ -6,7 +6,7 @@
       </v-tabs>
 
     <div class="hidden md:flex absolute w-full top-24 flex justify-center items-center text-gray-950 text-xs">
-      <div class="w-1/4 text-left" v-html="middlePanelText[modelName]"></div>
+      <div class="w-1/4 text-center" v-html="middlePanelText[modelName]"></div>
     </div>
     
     <div ref="baseDomObject" class="h-full" :class="mdAndUp ? 'baseDom-md' : 'baseDom-sm'" />
@@ -145,6 +145,7 @@ export default {
     this.container = this.$refs.baseDomObject;
     this.modelName = this.$model().name;
     this.middlePanelText = this.$middlePanelText();
+    this.nrrdImages = this.$nrrdImages();
 
     if(this.modelName === "cyst"){
       this.tab2 = "2D Ultrasound";
@@ -250,6 +251,11 @@ export default {
                 this.scene.controls.noPan = true;
                 this.removeContainerListener();
               }else{
+
+                this.nrrdImages.push({
+                  "image": this.nrrdSliceZ,
+                  "initIndex": this.nrrdSliceZ.index,
+                })
                 // bunding box
                 const geometry = new this.THREE.BoxGeometry( nrrdRas[0], nrrdRas[1], nrrdRas[2] ); 
                 const material = new this.THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
@@ -317,6 +323,12 @@ export default {
           this.modelToScenes[k].resetView();
         }
       }
+      this.nrrdImages.forEach((nrrdImage) => {
+        if(nrrdImage.image.index !== nrrdImage.initIndex){
+          nrrdImage.image.index = nrrdImage.initIndex;
+          nrrdImage.image.repaint.call(nrrdImage.image);
+        }
+      });
     },
   },
 

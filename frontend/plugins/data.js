@@ -52,6 +52,8 @@ const rightBoundingBoxIndex = {
     "ductal": 27,
 }
 
+const nrrdImages = []
+
 export default (context, inject) => {
     inject("leftPanelText", () => {
         return leftPanelText;
@@ -64,5 +66,8 @@ export default (context, inject) => {
     }),
     inject("rightBoundingBoxIndex", () => {
         return rightBoundingBoxIndex;
+    }),
+    inject("nrrdImages", () => {
+        return nrrdImages;
     })
 }
