@@ -43,22 +43,22 @@ export default {
           "modelView/density-4/left/density100.glb",
         ],
         cyst: [
-          "modelView/benign-cyst/left/density100.glb",
+          "modelView/density-3/left/density75.glb",
         ],
         fibroadenoma:[
-          "modelView/benign-fib/left/density100.glb",
+          "modelView/density-3/left/density75.glb",
         ],
         calcifications:[
-          "modelView/density-1/left/density100.glb",
+          "modelView/density-3/left/density75.glb",
         ],
         dcis:[
-          "modelView/cancer-dcis/left/density100.glb",
+          "modelView/density-3/left/density75.glb",
         ],
         lobular:[
-          "modelView/cancer-lobular/left/density100.glb",
+          "modelView/density-3/left/density75.glb",
         ],
         ductal:[
-          "modelView/cancer-ductal/left/density100.glb",
+          "modelView/density-4/left/density100.glb",
         ]
       },
     };
