@@ -33,7 +33,6 @@ export default {
       return "bg-pink-success";
     },
     panelHeightStyle() {
-      console.log(this.$route); 
       if (this.$vuetify.breakpoint.mdAndUp) {
         this.$nuxt.$emit("panel-height", this.panelHeight);
         return {

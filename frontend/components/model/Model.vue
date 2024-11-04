@@ -145,6 +145,7 @@ export default {
     this.container = this.$refs.baseDomObject;
     this.modelName = this.$model().name;
     this.middlePanelText = this.$middlePanelText();
+    this.nrrdImages = this.$nrrdImages();
 
     if(this.modelName === "cyst"){
       this.tab2 = "2D Ultrasound";
@@ -250,6 +251,11 @@ export default {
                 this.scene.controls.noPan = true;
                 this.removeContainerListener();
               }else{
+
+                this.nrrdImages.push({
+                  "image": this.nrrdSliceZ,
+                  "initIndex": this.nrrdSliceZ.index,
+                })
                 // bunding box
                 const geometry = new this.THREE.BoxGeometry( nrrdRas[0], nrrdRas[1], nrrdRas[2] ); 
                 const material = new this.THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
@@ -317,6 +323,12 @@ export default {
           this.modelToScenes[k].resetView();
         }
       }
+      this.nrrdImages.forEach((nrrdImage) => {
+        if(nrrdImage.image.index !== nrrdImage.initIndex){
+          nrrdImage.image.index = nrrdImage.initIndex;
+          nrrdImage.image.repaint.call(nrrdImage.image);
+        }
+      });
     },
   },
 

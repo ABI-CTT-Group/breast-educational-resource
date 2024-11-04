@@ -92,9 +92,7 @@ export default {
     panelHeight: (height) => {},
   },
 
-  updated() {
-    console.log("updated", this.$refs.panel.clientHeight);
-    
+  updated() {    
     this.panelHeight = this.$refs.panel.clientHeight;
   },
 
