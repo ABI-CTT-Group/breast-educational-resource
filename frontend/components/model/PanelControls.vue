@@ -161,7 +161,6 @@ export default {
               })
 
               // update image window high
-              console.log(volume);
               volume.windowHigh = volume.windowHigh / 2;
               volume.repaintAllSlices();
               
