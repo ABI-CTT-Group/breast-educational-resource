@@ -95,6 +95,7 @@ export default {
     this.modelData = this.$modelData();
     this.container = this.$refs.rightContainer;
     this.rightPanelText = this.$rightPanelText();
+    this.nrrdImages = this.$nrrdImages();
     
 
     this.container.appendChild(this.baseContainer);
@@ -125,8 +126,8 @@ export default {
         this.scene = this.baseRenderer.createScene(modelName);
         // this.scene.controls.staticMoving = true;
         this.scene.controls.rotateSpeed = 3.0;
-        this.scene.controls.minDistance = 500;
-        this.scene.controls.maxDistance = 3000;
+        this.scene.controls.minDistance = 250;
+        this.scene.controls.maxDistance = 1000;
         this.scene.controls.panSpeed = 0.5;
         this.baseRenderer.setCurrentScene(this.scene);
 
@@ -153,6 +154,17 @@ export default {
               this.nrrdSliceZ.index = this.boundingBoxIndex * this.nrrdSliceZ.volume.spacing[2];
               this.nrrdSliceZ.repaint.call(this.nrrdSliceZ);
             }
+
+            this.nrrdImages.push({
+                  "image": this.nrrdSliceZ,
+                  "initIndex": this.nrrdSliceZ.index,
+              })
+
+              // update image window high
+              console.log(volume);
+              volume.windowHigh = volume.windowHigh / 2;
+              volume.repaintAllSlices();
+              
             this.nrrdBias = new this.THREE.Vector3(x_bias, y_bias, z_bias);
             // bunding box
             const geometry = new this.THREE.BoxGeometry( nrrdRas[0], nrrdRas[1], nrrdRas[2] ); 
