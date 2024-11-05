@@ -6,7 +6,7 @@
     </div>
 
     <div class="hidden md:flex absolute w-full top-24 flex justify-center items-center text-gray-950 text-xs">
-      <div class="w-4/5 text-center" v-html="rightPanelText[modelName]"></div>
+      <div class="w-11/12 text-justify" v-html="rightPanelText[modelName]"></div>
     </div>
 
     <div ref="rightContainer" class="w-full h-full" :class="mdAndUp ? 'baseDom-md' : 'baseDom-sm'">

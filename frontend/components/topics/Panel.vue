@@ -1,6 +1,6 @@
 <template>
   <div class="pa-2">
-    <div class="flexbox demo-head">
+    <div class="flexbox demo-head pl-3">
       <div>
         <h1 class="pt-2 main-heading">
           {{ $parentTopic().heading }}
