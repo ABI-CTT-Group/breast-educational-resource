@@ -53,27 +53,27 @@ export default {
           "modelView/density-4/right/mri.nrrd",
           "modelView/density-4/right/mri_view.json",
         ],
-        cyst: [
+        benign_cyst: [
         "modelView/benign-cyst/right/mri.nrrd",
         "modelView/benign-cyst/right/mri_view.json",
         ],
-        fibroadenoma:[
+        benign_fibroadenoma:[
           "modelView/benign-fib/right/mri.nrrd",
           "modelView/benign-fib/right/mri_view.json",
         ],
-        calcifications:[
+        benign_calcifications:[
           "modelView/density-1/right/mri.nrrd",
           "modelView/density-1/right/mri_view.json",
         ],
-        dcis:[
+        cancer_dcis:[
           "modelView/cancer-dcis/right/mri.nrrd",
           "modelView/cancer-dcis/right/mri_view.json",
         ],
-        lobular:[
+        cancer_lobular:[
           "modelView/cancer-lobular/right/mri.nrrd",
           "modelView/cancer-lobular/right/mri_view.json",
         ],
-        ductal:[
+        cancer_ductal:[
           "modelView/cancer-ductal/right/mri.nrrd",
           "modelView/cancer-ductal/right/mri_view.json",
         ]

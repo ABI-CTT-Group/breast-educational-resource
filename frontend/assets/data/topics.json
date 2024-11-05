@@ -70,7 +70,7 @@
         "dataFile": "breast-main",
         "category": "success",
         "subTitle": "subSuccess",
-        "model": { "name": "cyst" }
+        "model": { "name": "benign_cyst" }
       },
       "fibroadenoma": {
         "title": "Fibroadenoma",
@@ -79,7 +79,7 @@
         "dataFile": "breast-main",
         "category": "success",
         "subTitle": "subSuccess",
-        "model": { "name": "fibroadenoma" }
+        "model": { "name": "benign_fibroadenoma" }
       }
     }
   },
@@ -95,7 +95,7 @@
         "dataFile": "breast-main",
         "category": "success",
         "subTitle": "subSuccess",
-        "model": { "name": "dcis" }
+        "model": { "name": "cancer_dcis" }
       },
       "lobular": {
         "title": "Lobular",
@@ -104,7 +104,7 @@
         "dataFile": "breast-main",
         "category": "success",
         "subTitle": "subSuccess",
-        "model": { "name": "lobular" }
+        "model": { "name": "cancer_lobular" }
       },
       "ductal": {
         "title": "Ductal",
@@ -113,7 +113,7 @@
         "dataFile": "breast-main",
         "category": "success",
         "subTitle": "subSuccess",
-        "model": { "name": "ductal" }
+        "model": { "name": "cancer_ductal" }
       }
     }
   }
