@@ -4,7 +4,7 @@
     <div class="hidden md:flex absolute w-full top-24 flex flex-col justify-center items-center text-gray-950 text-xs">
       <div class="w-11/12 text-justify" v-html="leftPanelText[navPanelName]"></div>
       <hr class="border-zinc-600 w-11/12">
-      <div class="w-11/12 text-justify italic">Click through the tabs below to learn about various breast cancers.</div>
+      <div class="w-11/12 text-justify italic">Click through the tabs below to learn about {{ pageInfo }}.</div>
     </div>
     <div :class="model_title">
       <lazy-panel />
@@ -27,6 +27,7 @@ export default {
       navPanelName: null,
       leftPanelText: {},
       showText: false,
+      pageInfo: "the breast",
       leftBreastView: "modelView/left_breast_view.json",
       modelUrlsArray:{
         normal: [
@@ -44,22 +45,22 @@ export default {
         density_4:[
           "modelView/density-4/left/density100.glb",
         ],
-        cyst: [
+        benign_cyst: [
           "modelView/density-3/left/density75.glb",
         ],
-        fibroadenoma:[
+        benign_fibroadenoma:[
           "modelView/density-3/left/density75.glb",
         ],
-        calcifications:[
+        benign_calcifications:[
           "modelView/density-3/left/density75.glb",
         ],
-        dcis:[
+        cancer_dcis:[
           "modelView/density-3/left/density75.glb",
         ],
-        lobular:[
+        cancer_lobular:[
           "modelView/density-3/left/density75.glb",
         ],
-        ductal:[
+        cancer_ductal:[
           "modelView/density-4/left/density100.glb",
         ]
       },
@@ -89,7 +90,7 @@ export default {
     this.model_panel = "model_name";
     this.model_title = "model_title";
     this.$nuxt.$on("onNavChange", this.onNavChange);
-    
+
     !!this.navPanelName ? this.navPanelName : (this.navPanelName = this.$model().name);
 
     this.start();
@@ -120,6 +121,7 @@ export default {
     onNavChange(modelName) {
       this.navPanelName = modelName;
       this.loadModel(this.modelUrlsArray[this.navPanelName][0], this.navPanelName+"left");
+      this.swicthDescription();
     },
     start() {
 
@@ -169,6 +171,18 @@ export default {
       }
       this.scene.onWindowResize();
     },
+
+    swicthDescription() {
+      if (this.navPanelName.includes("density")){
+        this.pageInfo = "breast density";
+      }else if (this.navPanelName.includes("benign")){
+        this.pageInfo = "benign breast conditions";
+      }else if (this.navPanelName.includes("cancer")){
+        this.pageInfo = "breast cancer";
+      }else{
+        this.pageInfo = "the breast";
+      }
+    }
   },
 
   watch: {},

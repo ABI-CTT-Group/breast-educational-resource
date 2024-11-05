@@ -87,33 +87,33 @@ export default {
           "modelView/density-4/middle/m_view.json",
           "modelView/density-4/middle/m2d.nrrd"
         ],
-        cyst: [
+        benign_cyst: [
           "modelView/benign-cyst/middle/m3d.nrrd",
           "modelView/benign-cyst/middle/m_view.json",
           "modelView/benign-cyst/middle/u2d.nrrd",
           "modelView/benign-cyst/middle/u_view.json",
         ],
-        fibroadenoma:[
+        benign_fibroadenoma:[
           "modelView/benign-fib/middle/m3d.nrrd",
           "modelView/benign-fib/middle/m_view.json",
           "modelView/benign-fib/middle/m2d.nrrd"
         ],
-        calcifications:[
+        benign_calcifications:[
           "modelView/density-1/middle/m3d.nrrd",
           "modelView/density-1/middle/m_view.json",
           "modelView/density-1/middle/m2d.nrrd"
         ],
-        dcis:[
+        cancer_dcis:[
           "modelView/cancer-dcis/middle/m3d.nrrd",
           "modelView/cancer-dcis/middle/m_view.json",
           "modelView/cancer-dcis/middle/m2d.nrrd"
         ],
-        lobular:[
+        cancer_lobular:[
           "modelView/cancer-lobular/middle/m3d.nrrd",
           "modelView/cancer-lobular/middle/m_view.json",
           "modelView/cancer-lobular/middle/m2d.nrrd"
         ],
-        ductal:[
+        cancer_ductal:[
           "modelView/cancer-ductal/middle/m3d.nrrd",
           "modelView/cancer-ductal/middle/m_view.json",
           "modelView/cancer-ductal/middle/m2d.nrrd"
@@ -147,7 +147,7 @@ export default {
     this.middlePanelText = this.$middlePanelText();
     this.nrrdImages = this.$nrrdImages();
 
-    if(this.modelName === "cyst"){
+    if(this.modelName === "benign_cyst"){
       this.tab2 = "2D Ultrasound";
     }else{
       this.tab2 = "2D Mammogram";
@@ -191,7 +191,7 @@ export default {
         this.currentView = "3D Mammogram";
         this.loadNrrd(modelUrl, this.modelName+"middle_3d");
       } else {
-        this.currentView = this.modelName === "cyst" ? "2D Ultrasound" : "2D Mammogram";
+        this.currentView = this.modelName === "benign_cyst" ? "2D Ultrasound" : "2D Mammogram";
         this.loadNrrd(this.modelUrlsArray[this.modelName][2], this.modelName+"middle_2d");
       }
     },
