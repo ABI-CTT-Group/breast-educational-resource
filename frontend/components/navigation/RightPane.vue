@@ -4,7 +4,7 @@
       <model />
     </div>
     <div
-      class="flex-1 flex flex-col justify-center items-center md:fixed md:right-0 md:top-0 md:h-full md:w-1/4"
+      class="flex-1 flex flex-col justify-center items-center md:fixed md:right-0 md:top-0 md:h-full  md:min-w-[499px] md:w-[30vw]"
     >
       <PanelControls />
       <div
