@@ -64,58 +64,58 @@ export default {
       modelUrlsArray:{
         normal: [
           "modelView/density-1/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-1/middle/m_view.json",
           "modelView/density-1/middle/m2d.nrrd"
         ],
         density_1: [
           "modelView/density-1/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-1/middle/m_view.json",
           "modelView/density-1/middle/m2d.nrrd"
         ],
         density_2: [
           "modelView/density-2/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-2/middle/m_view.json",
           "modelView/density-2/middle/m2d.nrrd"
         ],
         density_3: [
           "modelView/density-3/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-3/middle/m_view.json",
           "modelView/density-3/middle/m2d.nrrd"
         ],
         density_4: [
           "modelView/density-4/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-4/middle/m_view.json",
           "modelView/density-4/middle/m2d.nrrd"
         ],
         benign_cyst: [
           "modelView/benign-cyst/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/benign-cyst/middle/m_view.json",
           "modelView/benign-cyst/middle/u2d.nrrd",
           "modelView/benign-cyst/middle/u_view.json",
         ],
         benign_fibroadenoma:[
           "modelView/benign-fib/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/benign-fib/middle/m_view.json",
           "modelView/benign-fib/middle/m2d.nrrd"
         ],
         benign_calcifications:[
           "modelView/density-1/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/density-1/middle/m_view.json",
           "modelView/density-1/middle/m2d.nrrd"
         ],
         cancer_dcis:[
           "modelView/cancer-dcis/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/cancer-dcis/middle/m_view.json",
           "modelView/cancer-dcis/middle/m2d.nrrd"
         ],
         cancer_lobular:[
           "modelView/cancer-lobular/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/cancer-lobular/middle/m_view.json",
           "modelView/cancer-lobular/middle/m2d.nrrd"
         ],
         cancer_ductal:[
           "modelView/cancer-ductal/middle/m3d.nrrd",
-          "modelView/m_view.json",
+          "modelView/cancer-ductal/middle/m_view.json",
           "modelView/cancer-ductal/middle/m2d.nrrd"
         ]
       },
