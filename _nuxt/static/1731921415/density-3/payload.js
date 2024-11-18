@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/density-3", {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:"3",heading:"Heterogeneously dense",icon:"mdi-dots-hexagon",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"density_3"},parentTopic:{slug:"density",heading:"Breast Density",title:"Density"}}]]});

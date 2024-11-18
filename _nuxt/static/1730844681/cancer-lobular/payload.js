@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/cancer-lobular", (function(a){return {data:[{}],fetch:{},mutations:[["setCurrentContent",{title:a,heading:a,icon:"mdi-home-heart",dataFile:"breast-main",category:"success",subTitle:"subSuccess",model:{name:"cancer_lobular"},parentTopic:{slug:"cancer",heading:"Breast Cancer",title:"Cancer"}}]]}}("Lobular")));
