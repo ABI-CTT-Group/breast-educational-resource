@@ -47,7 +47,7 @@ const rightBoundingBoxIndex = {
     "benign_cyst": 58,
     "benign_fibroadenoma": 68,
     "benign_calcifications": 0,
-    "cancer_dcis": 80,
+    "cancer_dcis": 90,
     "cancer_lobular": 80,
     "cancer_ductal": 27,
 }

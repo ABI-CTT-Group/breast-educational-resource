@@ -35,47 +35,47 @@ export default {
       modelUrlsArray:{
         normal: [
           "modelView/density-1/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-1/right/mri_view.json",
         ],
         density_1: [
           "modelView/density-1/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-1/right/mri_view.json",
         ],
         density_2: [
           "modelView/density-2/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-2/right/mri_view.json",
         ],
         density_3: [
           "modelView/density-3/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-3/right/mri_view.json",
         ],
         density_4: [
           "modelView/density-4/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-4/right/mri_view.json",
         ],
         benign_cyst: [
         "modelView/benign-cyst/right/mri.nrrd",
-        "modelView/mri_view.json",
+        "modelView/benign-cyst/right/mri_view.json",
         ],
         benign_fibroadenoma:[
           "modelView/benign-fib/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/benign-fib/right/mri_view.json",
         ],
         benign_calcifications:[
           "modelView/density-1/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/density-1/right/mri_view.json",
         ],
         cancer_dcis:[
           "modelView/cancer-dcis/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/cancer-dcis/right/mri_view.json",
         ],
         cancer_lobular:[
           "modelView/cancer-lobular/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/cancer-lobular/right/mri_view.json",
         ],
         cancer_ductal:[
           "modelView/cancer-ductal/right/mri.nrrd",
-          "modelView/mri_view.json",
+          "modelView/cancer-ductal/right/mri_view.json",
         ]
       },
     };
