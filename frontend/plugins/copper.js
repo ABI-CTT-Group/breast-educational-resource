@@ -80,21 +80,30 @@ const raycaster = (scene, container, nrrdSliceZ, nrrdMesh, nrrdMaxIndex) => {
   const mouseUp = (event) => {
     userMouseDown = false;
   }
+
   const mouseMove = (event) => {
     const a = scene.pickSpecifiedModel(nrrdMesh, {x: event.offsetX, y: event.offsetY});
+    let distance = 0;
+
 
     if (userMouseDown) {
-      // throttle(()=>{
-        
-      // }, 1000).call();
       endY = event.clientY; 
-        const distance = Math.ceil((endY - startY)/100);
-        let index = Math.ceil(nrrdSliceZ.index / nrrdSliceZ.volume.spacing[2]);
-        index += distance;
-        if (index > nrrdMaxIndex) index = nrrdMaxIndex;
-        if (index < 0) index = 0;
-        nrrdSliceZ.index = index * nrrdSliceZ.volume.spacing[2];
-        nrrdSliceZ.repaint.call(nrrdSliceZ);
+      const to = endY - startY;
+      if(to > 0){
+        distance = 1 * nrrdSliceZ.volume.spacing[2];
+      }else{
+        distance = -1 * nrrdSliceZ.volume.spacing[2];
+      }
+      
+      let index = nrrdSliceZ.index/nrrdSliceZ.volume.spacing[2];
+      index += distance;
+      
+      if (index > nrrdMaxIndex) index = nrrdMaxIndex;
+      if (index < 0) index = 0;
+      
+      nrrdSliceZ.index = index * nrrdSliceZ.volume.spacing[2];
+      nrrdSliceZ.repaint.call(nrrdSliceZ);
+      startY = endY;
     }
 
     if(!!a.intersectedObject){
