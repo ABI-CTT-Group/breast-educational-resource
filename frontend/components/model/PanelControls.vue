@@ -96,6 +96,7 @@ export default {
     this.container = this.$refs.rightContainer;
     this.rightPanelText = this.$rightPanelText();
     this.nrrdImages = this.$nrrdImages();
+    this.previoursCameras = this.$previoursCameras();
     
 
     this.container.appendChild(this.baseContainer);
@@ -199,7 +200,20 @@ export default {
         this.modelToScenes[modelName] = this.scene;
       }else{
         this.baseRenderer.setCurrentScene(this.scene);
-        this.addContainerListener();
+        setTimeout(() => {
+          this.scene.camera.up.set(
+            this.previoursCameras["right"][this.modelName]["up"].x,
+            this.previoursCameras["right"][this.modelName]["up"].y,
+            this.previoursCameras["right"][this.modelName]["up"].z
+          );
+          this.scene.camera.position.set(
+            this.previoursCameras["right"][this.modelName]["position"].x,
+            this.previoursCameras["right"][this.modelName]["position"].y,
+            this.previoursCameras["right"][this.modelName]["position"].z
+          );
+          this.addContainerListener();
+        }, 200);
+        
       }
       this.scene.onWindowResize();
     },
@@ -247,6 +261,18 @@ export default {
     },
   },
   beforeDestroy() {
+    this.previoursCameras["right"][this.modelName] = {
+      "up": {
+        "x": this.scene.camera.up.x,
+        "y": this.scene.camera.up.y,
+        "z": this.scene.camera.up.z,
+      },
+      "position": {
+        "x": this.scene.camera.position.x,
+        "y": this.scene.camera.position.y,
+        "z": this.scene.camera.position.z,
+      }
+    };
     // Wirte code before destory this component
     this.removeContainerListener();
   },

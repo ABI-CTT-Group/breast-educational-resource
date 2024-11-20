@@ -83,6 +83,7 @@ export default {
     this.container = this.$refs.leftContainer;
     this.modelToScenes = this.$modelToScenes();
     this.leftPanelText = this.$leftPanelText();
+    this.previoursCameras = this.$previoursCameras();
 
     this.container.appendChild(this.baseContainer);
 
@@ -122,6 +123,18 @@ export default {
       this.navPanelName = modelName;
       this.loadModel(this.modelUrlsArray[this.navPanelName][0], this.navPanelName+"left");
       this.swicthDescription();
+      this.previoursCameras["left"][this.navPanelName] = {
+        "up": {
+          "x": this.scene.camera.up.x,
+          "y": this.scene.camera.up.y,
+          "z": this.scene.camera.up.z,
+        },
+        "position": {
+          "x": this.scene.camera.position.x,
+          "y": this.scene.camera.position.y,
+          "z": this.scene.camera.position.z,
+        }
+      };
     },
     start() {
 
@@ -138,6 +151,8 @@ export default {
       this.scene = this.baseRenderer.getSceneByName(model_name);
 
       if (this.scene === undefined) {
+        console.log("Creating new scene");
+        
         this.scene = this.baseRenderer.createScene(model_name);
         this.scene.addLights();
         this.scene.controls.rotateSpeed = 3.0;
@@ -168,6 +183,23 @@ export default {
         this.modelToScenes[model_name] = this.scene;
       }else{
         this.baseRenderer.setCurrentScene(this.scene);
+
+        if(!!this.previoursCameras["left"][this.navPanelName]){
+          setTimeout(() => {
+            this.scene.camera.up.set(
+              this.previoursCameras["left"][this.navPanelName]["up"].x,
+              this.previoursCameras["left"][this.navPanelName]["up"].y,
+              this.previoursCameras["left"][this.navPanelName]["up"].z
+            );
+            this.scene.camera.position.set(
+              this.previoursCameras["left"][this.navPanelName]["position"].x,
+              this.previoursCameras["left"][this.navPanelName]["position"].y,
+              this.previoursCameras["left"][this.navPanelName]["position"].z
+            );
+          }, 200);
+        }
+        
+        
       }
       this.scene.onWindowResize();
     },

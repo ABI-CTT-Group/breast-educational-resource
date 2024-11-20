@@ -146,6 +146,7 @@ export default {
     this.modelName = this.$model().name;
     this.middlePanelText = this.$middlePanelText();
     this.nrrdImages = this.$nrrdImages();
+    this.previoursCameras = this.$previoursCameras();
 
     if(this.modelName === "benign_cyst"){
       this.tab2 = "2D Ultrasound";
@@ -212,6 +213,7 @@ export default {
       loadBar1.progress.innerHTML = "Loading image...";
 
       this.scene = this.baseRenderer.getSceneByName(modelName);
+
       if (this.scene === undefined) {
         this.scene = this.baseRenderer.createScene(modelName);
         // this.scene.controls.staticMoving = true;
@@ -289,13 +291,25 @@ export default {
       }else{
         loadingContainer.style.display = "none";
         this.baseRenderer.setCurrentScene(this.scene);
-        if(this.currentView === "2D Mammogram"){
-          this.scene.controls.noRotate = true;
-          this.scene.controls.noPan = true;
-          this.removeContainerListener();
-        }else{
-          this.addContainerListener();
-        }
+        setTimeout(() => {
+          this.scene.camera.up.set(
+            this.previoursCameras["middle"][this.modelName]["up"].x,
+            this.previoursCameras["middle"][this.modelName]["up"].y,
+            this.previoursCameras["middle"][this.modelName]["up"].z
+          );
+          this.scene.camera.position.set(
+            this.previoursCameras["middle"][this.modelName]["position"].x,
+            this.previoursCameras["middle"][this.modelName]["position"].y,
+            this.previoursCameras["middle"][this.modelName]["position"].z
+          );
+          if(this.currentView === "2D Mammogram"){
+            this.scene.controls.noRotate = true;
+            this.scene.controls.noPan = true;
+            this.removeContainerListener();
+          }else{
+            this.addContainerListener();
+          }
+        }, 200);
       }
       this.loadFirstTime = false;
       this.scene.onWindowResize();
@@ -336,6 +350,18 @@ export default {
 
   beforeDestroy() {
     // Wirte code before destory this component
+    this.previoursCameras["middle"][this.modelName] = {
+      "up": {
+        "x": this.scene.camera.up.x,
+        "y": this.scene.camera.up.y,
+        "z": this.scene.camera.up.z,
+      },
+      "position": {
+        "x": this.scene.camera.position.x,
+        "y": this.scene.camera.position.y,
+        "z": this.scene.camera.position.z,
+      }
+    };
     this.removeContainerListener();
   },
 };
