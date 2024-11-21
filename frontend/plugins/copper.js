@@ -74,11 +74,19 @@ const raycaster = (scene, container, nrrdSliceZ, nrrdMesh, nrrdMaxIndex) => {
     if (event.button === 0) {
       startY = event.clientY;
       userMouseDown = true;
+      container.style.cursor = "pointer";
+      scene.controls.noRotate = true;
     }
   }
 
   const mouseUp = (event) => {
+    // findMesh = false;
+    scene.controls.noRotate = false;
     userMouseDown = false;
+    container.style.cursor = "auto";
+    // container.removeEventListener("pointerdown", mouseDown);
+    // container.removeEventListener("pointerup", mouseUp);
+    
   }
 
   const mouseMove = (event) => {
@@ -108,19 +116,17 @@ const raycaster = (scene, container, nrrdSliceZ, nrrdMesh, nrrdMaxIndex) => {
 
     if(!!a.intersectedObject){
       if(!findMesh){
-        scene.controls.noRotate = true;
-        container.style.cursor = "pointer";
         container.addEventListener("pointerdown", mouseDown);
         container.addEventListener("pointerup", mouseUp);
       }
       findMesh = true;
     }else{
       findMesh = false;
-      scene.controls.noRotate = false;
-      userMouseDown = false;
-      container.style.cursor = "auto";
+      // scene.controls.noRotate = false;
+      // userMouseDown = false;
+      // container.style.cursor = "auto";
       container.removeEventListener("pointerdown", mouseDown);
-      container.removeEventListener("pointerup", mouseUp);
+      // container.removeEventListener("pointerup", mouseUp);
     }
   }
   return {mouseMove, mouseDown, mouseUp};

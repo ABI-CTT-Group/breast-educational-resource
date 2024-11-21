@@ -54,6 +54,12 @@ const rightBoundingBoxIndex = {
 
 const nrrdImages = []
 
+const previoursCameras = {
+    "left":{},
+    "middle":{},
+    "right":{}
+}
+
 export default (context, inject) => {
     inject("leftPanelText", () => {
         return leftPanelText;
@@ -69,5 +75,8 @@ export default (context, inject) => {
     }),
     inject("nrrdImages", () => {
         return nrrdImages;
+    }),
+    inject("previoursCameras", () => {
+        return previoursCameras;
     })
 }
