@@ -211,9 +211,9 @@ export default {
             this.previoursCameras["right"][this.modelName]["position"].y,
             this.previoursCameras["right"][this.modelName]["position"].z
           );
-          this.addContainerListener();
-        }, 200);
-        
+          
+        }, 300);
+        this.addContainerListener();
       }
       this.scene.onWindowResize();
     },

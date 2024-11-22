@@ -302,14 +302,15 @@ export default {
             this.previoursCameras["middle"][this.modelName]["position"].y,
             this.previoursCameras["middle"][this.modelName]["position"].z
           );
-          if(this.currentView === "2D Mammogram"){
+          
+        }, 300);
+        if(this.currentView === "2D Mammogram"){
             this.scene.controls.noRotate = true;
             this.scene.controls.noPan = true;
             this.removeContainerListener();
           }else{
             this.addContainerListener();
           }
-        }, 200);
       }
       this.loadFirstTime = false;
       this.scene.onWindowResize();
